@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:01,200
+Welcome to the lesson.
+
+2
+00:00:01,200 --> 00:00:02,500
+Già fatto — café ✓
+
+3
+00:00:03,500 --> 00:00:04,800
+First line of cue three
+Second line of cue three
+
+4
+00:00:04,800 --> 00:00:06,000
+End of the sample.

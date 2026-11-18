@@ -1,0 +1,20 @@
+:root {
+  color-scheme: light dark;
+  --fg: #1d1d1f;
+  --bg: #fafaf8;
+  --muted: #6b6b70;
+  --accent: #2f5d8a;
+  --error: #b3261e;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --fg: #ececec; --bg: #161618; --muted: #9a9aa0; --accent: #8db4dc; --error: #f2b8b5; }
+}
+body { margin: 0; font: 16px/1.5 system-ui, sans-serif; color: var(--fg); background: var(--bg); }
+main { max-width: 28rem; margin: 10vh auto; padding: 0 16px; }
+form { display: grid; gap: 12px; }
+label { display: grid; gap: 4px; color: var(--muted); }
+input { font: inherit; padding: 8px 10px; border: 1px solid var(--muted); border-radius: 6px; background: transparent; color: var(--fg); }
+button { font: inherit; padding: 8px 14px; border: 0; border-radius: 6px; background: var(--accent); color: var(--bg); cursor: pointer; }
+.error { color: var(--error); min-height: 1.5em; margin: 0; }
+.note { color: var(--muted); font-size: 14px; }
+code { font: 14px/1.4 ui-monospace, Consolas, monospace; }

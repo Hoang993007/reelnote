@@ -1,0 +1,64 @@
+/* The notebook's text: rendered markdown and the Tiptap editor look the same, so a click edits in place. */
+
+.b-text .md > :first-child, .b-text .ProseMirror > :first-child { margin-top: 0; }
+.b-text .md > :last-child, .b-text .ProseMirror > :last-child { margin-bottom: 0; }
+.b-text p { margin: 0 0 0.55em; }
+.b-text h1, .b-text h2, .b-text h3 { font-family: var(--font-read); font-weight: 600; line-height: 1.3; margin: 0.8em 0 0.35em; text-wrap: balance; }
+.b-text h1 { font-size: 23px; }
+.b-text h2 { font-size: 20px; }
+.b-text h3 { font-size: 18px; }
+.b-text ul, .b-text ol { margin: 0 0 0.55em; padding-left: 22px; }
+.b-text li { margin: 0.3em 0; padding-left: 2px; }
+.b-text li::marker { color: var(--ink-3); }
+.b-text strong { font-weight: 600; }
+.b-text li > p { margin: 0; }
+.b-text blockquote { margin: 0 0 0.55em; padding-left: 14px; border-left: 2px solid var(--rule-strong); color: var(--ink-2); }
+.b-text code { font: 400 0.88em/1.4 var(--font-mono); background: var(--desk-2); padding: 1px 4px; border-radius: 4px; }
+.b-text pre { font: 400 13px/1.5 var(--font-mono); background: var(--desk-2); padding: 10px 12px; border-radius: 6px; overflow: auto; }
+.b-text pre code { background: none; padding: 0; }
+.b-text hr { border: 0; border-top: 1px solid var(--rule); margin: 1em 0; }
+.b-text a { color: var(--accent-text); }
+.b-text table { border-collapse: collapse; font: 400 var(--t-small)/1.45 var(--font-ui); margin: 0 0 0.55em; }
+.b-text th, .b-text td { border: 1px solid var(--rule); padding: 4px 8px; text-align: left; }
+.b-empty { color: var(--ink-3); font-style: normal; }
+.b-text, .b-h { cursor: text; }
+.blk.is-ro .b-text, .blk.is-ro .b-h { cursor: default; }
+
+/* Summary: a bulleted list in 15 px. */
+.sum-list ul { margin: 0; padding-left: 18px; font-size: 16px; line-height: 1.6; display: flex; flex-direction: column; gap: 4px; }
+.summary .b-text p { font-size: 16px; }
+
+/* Question: the answer after a dashed rule; an answered question dims its question line. */
+.b-q .b-text > .md > p + p, .b-q .ProseMirror > p + p { margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--rule-strong); }
+.b-q.is-answered .b-text > .md:first-child > p:first-child, .b-q.is-answered .ProseMirror > p:first-child { color: var(--ink-2); }
+
+/* Quote */
+.b-quote .b-text { font-style: italic; color: var(--ink-2); }
+
+/* Heading block */
+.b-h .ProseMirror p { margin: 0; }
+
+/* The editor */
+.b-editor { min-height: 1.65em; }
+.ProseMirror { outline: none; caret-color: var(--accent); white-space: pre-wrap; word-wrap: break-word; }
+.ProseMirror p.is-editor-empty:first-child::before { content: attr(data-placeholder); float: left; height: 0; color: var(--ink-3); pointer-events: none; font-style: normal; }
+.ProseMirror-selectednode .fig-img { box-shadow: 0 0 0 2px var(--accent); }
+.ProseMirror-gapcursor { display: none; pointer-events: none; position: absolute; }
+.ProseMirror-gapcursor::after { content: ''; display: block; position: absolute; top: -2px; width: 20px; border-top: 1px solid var(--ink); animation: gapcursor 1.1s steps(2, start) infinite; }
+.ProseMirror-focused .ProseMirror-gapcursor { display: block; }
+@keyframes gapcursor { to { visibility: hidden; } }
+.ProseMirror-hideselection *::selection { background: transparent; }
+.ProseMirror [draggable][contenteditable="false"] { user-select: text; }
+.blk.is-editing { background: var(--paper); }
+.blk.is-editing .b-tools { opacity: 1; pointer-events: auto; }
+.block-image-node { display: block; }
+.fig-node { display: block; }
+.fig-node.is-picked .fig-img { box-shadow: 0 0 0 2px var(--accent); }
+.fig { display: flex; }
+
+/* The private annotation is a textarea. */
+textarea.ann-x { border: 0; background: transparent; resize: none; overflow: hidden; padding: 0; font: italic 400 var(--t-small)/1.5 var(--font-ui); color: var(--ink-2); outline: none; width: 100%; }
+textarea.ann-x::placeholder { color: var(--ink-3); }
+
+/* The Continue card and blocks keep their focus ring visible. */
+.blk:focus-visible { box-shadow: 0 0 0 2px var(--accent); }

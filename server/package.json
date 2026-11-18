@@ -1,0 +1,38 @@
+{
+  "name": "@reelnote/server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=../.env src/start.ts",
+    "build": "node scripts/build.mjs",
+    "start": "node --env-file-if-exists=../.env dist/start.js",
+    "cli": "tsx --env-file-if-exists=../.env src/cli/main.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.test.json",
+    "lint": "eslint --ext .ts src test",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@fastify/multipart": "8.3.1",
+    "@fastify/send": "2.1.0",
+    "@fastify/static": "7.0.4",
+    "better-sqlite3": "13.0.3",
+    "drizzle-orm": "0.30.10",
+    "fastify": "4.29.1",
+    "pino": "10.3.1",
+    "pino-roll": "4.0.0",
+    "uuid": "10.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.13",
+    "@types/node": "^24.0.0",
+    "@types/uuid": "10.0.0",
+    "@typescript-eslint/eslint-plugin": "7.18.0",
+    "@typescript-eslint/parser": "7.18.0",
+    "esbuild": "0.27.7",
+    "eslint": "8.57.1",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3",
+    "vitest": "4.1.4"
+  }
+}

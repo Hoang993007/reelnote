@@ -1,0 +1,136 @@
+/* Reelnote design tokens (from the approved prototype).
+   Layout concept "Study desk": the source (video + transcript) sits on the desk,
+   your notebook is a sheet of paper beside it. */
+:root {
+  --desk: #F1F1EC;
+  --desk-2: #E7E7E0;
+  --desk-3: #DCDCD4;
+  --paper: #FFFFFF;
+  --paper-2: #F7F7F3;
+  --ink: #1C1F23;
+  --ink-2: #474D55;
+  --ink-3: #61676F;
+  --rule: #DEDED6;
+  --rule-strong: #C9C9C0;
+  --accent: #2C47A0;
+  --accent-hover: #233A86;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #E3E8F6;
+  --accent-text: #2C47A0;
+  --question: #855600;
+  --question-soft: #FAF0DA;
+  --private: #5A4A8E;
+  --private-soft: #EFEBF8;
+  --pos: #1F7A4D;
+  --pos-soft: #E3F3EA;
+  --neg: #B2382F;
+  --neg-soft: #FBE7E5;
+  --mark: #E39A2E;
+  --flash: #FFF3C4;
+  --video: #0C0E12;
+  --video-ink: #E9EBEF;
+  --video-accent: #8FA6EC;
+  --video-track: rgba(255, 255, 255, 0.18);
+  --shadow: 0 1px 2px rgba(20, 22, 26, 0.06), 0 10px 28px rgba(20, 22, 26, 0.10);
+  --overlay: rgba(20, 22, 26, 0.38);
+
+  /* One family for the UI and the notes, so the page reads as one piece. */
+  --font-ui: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-read: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+
+  /* 12 px is the floor: nothing that has to be read is smaller. */
+  --t-label: 12px;
+  --t-meta: 13px;
+  --t-small: 14px;
+  --t-ui: 15px;
+  --t-read: 17px;
+  --t-h2: 21px;
+  --t-h1: 30px;
+
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+
+  --r-chip: 4px;
+  --r-ctl: 6px;
+  --r-sheet: 10px;
+
+  --rail-w: 56px;
+  --pages-w: 248px;
+  --margin-w: 68px;
+  --topbar-h: 48px;
+  --status-h: 28px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --desk: #121417;
+    --desk-2: #1B1E23;
+    --desk-3: #262A30;
+    --paper: #191C21;
+    --paper-2: #1F2329;
+    --ink: #E6E8EB;
+    --ink-2: #B6BBC3;
+    --ink-3: #9CA2AB;
+    --rule: #2A2E35;
+    --rule-strong: #3A3F47;
+    --accent: #8FA6EC;
+    --accent-hover: #A9BBF2;
+    --accent-ink: #0F1218;
+    --accent-soft: #232B44;
+    --accent-text: #A9BBF2;
+    --question: #E6B964;
+    --question-soft: #2D2616;
+    --private: #BBAAF0;
+    --private-soft: #251F38;
+    --pos: #62C690;
+    --pos-soft: #17291F;
+    --neg: #F28A80;
+    --neg-soft: #33191A;
+    --mark: #E9A23B;
+    --flash: #3A3218;
+    --video: #08090B;
+    --video-ink: #E9EBEF;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 32px rgba(0, 0, 0, 0.45);
+    --overlay: rgba(0, 0, 0, 0.55);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --desk: #121417;
+  --desk-2: #1B1E23;
+  --desk-3: #262A30;
+  --paper: #191C21;
+  --paper-2: #1F2329;
+  --ink: #E6E8EB;
+  --ink-2: #B6BBC3;
+  --ink-3: #9CA2AB;
+  --rule: #2A2E35;
+  --rule-strong: #3A3F47;
+  --accent: #8FA6EC;
+  --accent-hover: #A9BBF2;
+  --accent-ink: #0F1218;
+  --accent-soft: #232B44;
+  --accent-text: #A9BBF2;
+  --question: #E6B964;
+  --question-soft: #2D2616;
+  --private: #BBAAF0;
+  --private-soft: #251F38;
+  --pos: #62C690;
+  --pos-soft: #17291F;
+  --neg: #F28A80;
+  --neg-soft: #33191A;
+  --mark: #E9A23B;
+  --flash: #3A3218;
+  --video: #08090B;
+  --video-ink: #E9EBEF;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 32px rgba(0, 0, 0, 0.45);
+  --overlay: rgba(0, 0, 0, 0.55);
+  color-scheme: dark;
+}

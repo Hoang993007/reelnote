@@ -1,0 +1,24 @@
+{
+  "name": "reelnote",
+  "private": true,
+  "license": "MIT",
+  "description": "Reelnote: a research and learning app. Sources, pages, notes stamped to local lecture videos, insights.",
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "build": "pnpm -r build",
+    "dev": "pnpm --filter @reelnote/server dev",
+    "start": "pnpm --filter @reelnote/server start",
+    "user": "pnpm --filter @reelnote/server cli user",
+    "share": "pnpm --filter @reelnote/server cli share",
+    "notes": "pnpm --filter @reelnote/server cli notes",
+    "import-videos": "pnpm --filter @reelnote/server cli import",
+    "cli": "pnpm --filter @reelnote/server cli"
+  }
+}
