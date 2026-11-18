@@ -7,6 +7,8 @@ for courses, talks and any other video-heavy subject.
 It runs on one PC. Friends open it in a browser over the home network or Tailscale and sign in; the owner
 decides who can read or edit each source.
 
+![The study desk: the lecture, its transcript following playback, and notes stamped to the second](docs/screenshots/study-desk.png)
+
 ## What it does
 
 - **Study desk.** Video player, live transcript and a notebook side by side. `N` writes a note at the current
@@ -24,6 +26,23 @@ decides who can read or edit each source.
 - **Works offline-ish.** Edits queue in the browser while the server is unreachable and replay when it is back.
 - **Accounts and sharing.** Email + password, sessions, per-source read/write sharing, an owner admin page.
 - **Installable** as an app window (PWA manifest), keyboard-first throughout.
+
+## Screenshots
+
+**Word lookup in context.** Select a word in the transcript: its meaning in that line, the line translated,
+other meanings, and Ask more for a follow-up chat.
+
+![Word lookup card for "cramming", with the meaning in this line, the line and its translation](docs/screenshots/word-lookup.png)
+
+**Home** picks up where you stopped, with open questions across sources.
+
+![Home with Continue, open questions and sources](docs/screenshots/home.png)
+
+**Search** everything with Ctrl K, accents optional.
+
+![Search palette finding notes for "recall"](docs/screenshots/search.png)
+
+All screenshots use demo data made for this README: a generated sample lecture and made-up notes.
 
 ## Engineering highlights
 
