@@ -1,5 +1,7 @@
 # Reelnote
 
+> **Archived 2026-11-20.** Its work continues in Scholia, in a private repository; this one stays as it was.
+
 **A self-hosted study desk for learning from video lectures.** Watch a lecture, read its transcript beside it,
 and take notes that are stamped to the second, so every note plays the video from where it was written. Made
 for courses, talks and any other video-heavy subject.
